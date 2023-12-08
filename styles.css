@@ -1,0 +1,208 @@
+:root {
+    --clr-1: #2c2c2c;
+    --clr-2: #1c1c1c;
+    --clr-3: #7d7d7d;
+    --clr-4: #60a1ef;
+    --clr-5: #d12d9c;
+    --clr-6: #a8a8a8;
+}
+
+body {
+    background-color: var(--clr-2);
+    color: #ffffff;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    text-align: center;
+    margin: 50px auto;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    max-width: 80%;
+    position: relative;
+    width: 55vh;
+    height: fit-content;
+}
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.settings__title{
+    position: relative;
+    right: -15px;
+    color: #a8a8a8;
+}
+
+.length_title{
+    text-align: center;
+    color: #a8a8a8;
+}
+
+.Generated_passwords{
+    position: relative;
+    right:66px;
+    color: #a8a8a8;
+    margin-top: 15px;
+
+}
+
+i {
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #a8a8a8;
+}
+
+.slider input[type="range"] {
+    width: 80%;
+    margin: 10px 0;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+.slider #lengthValue {
+    display: inline-block;
+    margin-left: 5px;
+    color: #3498db;
+    font-weight: bold;
+}
+
+
+.checkboxes {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 25px;
+
+
+}
+
+.setting{
+    position: relative;
+    margin: 5px;
+    background-color: rgba(44,62, 80, 0.1);
+    width: 93%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.checkboxes input[type="checkbox"] {
+    display: none;
+    
+}
+
+.checkboxes label {
+    position: relative;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+
+}
+
+.checkboxes label::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 26px;
+    background: #888;
+    border-radius: 15px;
+    transition: 0.3s;
+
+    transform: translateX(715%);
+    
+}
+
+.checkboxes input[type="checkbox"]:checked + label::before {
+    background: linear-gradient(135deg, #d12d9c, #60a1ef);
+
+}
+
+.checkboxes label::after {
+
+    transform: translateX(1380%);
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    left: 1px;
+    transition: 0.3s;
+}
+
+.checkboxes input[type="checkbox"]:checked + label::after {
+    left: 23px;
+
+
+
+}
+
+
+
+.copy-notification {
+    transition: opacity 0.3s ease;
+}
+
+.copy-notification.show {
+    opacity: 1;
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container::before,
+.container::after {
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-4),
+        var(--clr-5),
+        var(--clr-4)
+    );
+    border-radius: inherit;
+    animation: rotation 3s linear infinite;
+}
+
+.container::after {
+    filter: blur(0.75rem);
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
