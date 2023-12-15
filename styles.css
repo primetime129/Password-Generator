@@ -27,7 +27,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     max-width: 80%;
     position: relative;
-    width: 55vh;
+    width: 440px;
     height: fit-content;
 }
 
@@ -58,7 +58,7 @@ body {
 
 .Generated_passwords{
     position: relative;
-    right:66px;
+    right: 53px;
     color: #a8a8a8;
     margin-top: 15px;
 
@@ -133,7 +133,7 @@ h1 {
     border-radius: 15px;
     transition: 0.3s;
 
-    transform: translateX(715%);
+    transform: translateX(620%);
     
 }
 
@@ -144,7 +144,7 @@ h1 {
 
 .checkboxes label::after {
 
-    transform: translateX(1380%);
+    transform: translateX(1195%);
     content: "";
     position: absolute;
     width: 26px;
